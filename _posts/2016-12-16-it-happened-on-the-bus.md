@@ -39,12 +39,14 @@ If no 3rd party library's custom renderers work in Xamarin.Forms apps in the Win
 
 # Leave Curious
 
-So I left work curious (I'd recommend it), and decided to Google just a bit on the bus ride home.  I think the small keyboard on my phone encouraged me to keep the search terse; just the essential keywords of my problem: 
+So I left work curious (I'd recommend it), and decided to Google just a bit on the bus ride home.  I think the small keyboard on my phone encouraged me to keep the search terse; just the essential keywords of my problem:
+
 UWP ".NET Native" ViewRenderer
 
 And then I found it.  
 
 One line in an unrelated library's FAQ section about license keys: 
+
 > "For .NET Native compilation, you have to tell Xamarin.Forms which assemblies it should scan for custom controls and renderers"
 
 AH!  That makes so much sense!
