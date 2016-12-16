@@ -4,7 +4,7 @@ layout: post
 title: It Happened on the Bus
 ---
 Over the last few weeks we've noticed that a **lot** happens in your UWP project when you flip the switch from Debug build to Release build mode.  At the heart of it, has been this little check box on the UWP project build properties: "Compile with .NET Native tool chain".  
-<img src="{{site.baseurl}}/images/2016-12-16/CompileCheckBox.png" style="width: 300px;"/>
+<img src="{{site.baseurl}}/images/2016-12-16/CompileCheckBox.png" style="width: 500px;"/>
 
 
 There are some good posts about [what it means for UWP.]( https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#HG2ld3KGHUOiMVQI.97)  
