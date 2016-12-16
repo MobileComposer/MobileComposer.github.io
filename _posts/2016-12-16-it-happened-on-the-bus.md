@@ -24,12 +24,15 @@ The first is **without** .NET Native (Release build) enabled, and the 2nd is wit
 
 <table>
 <tr>
-<td>
+
+</tr>
+<tr>
+<td valign="top">
 <img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree.png" alt="NControl is in Visual Tree" style="width: 350px;"/> 
 </td>
 
 
-<td>
+<td valign="top">
 <img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree - No NControl.png" alt="NControl is gone" style="width: 350px;"/>
 </td>
 </tr>
