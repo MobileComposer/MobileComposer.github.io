@@ -37,7 +37,8 @@ It was then that I hit the point that I often hit when troubleshooting developme
 
 ## Leave Curious
 
-So I left work curious (I'd recommend it), and decided to Google just a bit on the bus ride home.  I think the small keyboard on my phone encouraged me to keep the search terse; just the essential keywords of my problem: UWP ".NET Native" ViewRenderer.  
+So I left work curious (I'd recommend it), and decided to Google just a bit on the bus ride home.  I think the small keyboard on my phone encouraged me to keep the search terse; just the essential keywords of my problem: 
+UWP ".NET Native" ViewRenderer
 
 And then I found it.  
 
