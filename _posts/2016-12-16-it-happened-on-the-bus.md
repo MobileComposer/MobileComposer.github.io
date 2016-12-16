@@ -26,12 +26,12 @@ Here's a comparison of the Live Visual Tree:
 <td>The 2nd is with it. Look, no NControl! </td>
 </tr>
 <tr>
-<td align="top">
+<td style="vertical-align: top">
 <img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree.png" alt="NControl is in Visual Tree" style="width: 350px;"/> 
 </td>
 
 
-<td align="top">
+<td style="vertical-align: top">
 <img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree - No NControl.png" alt="NControl is gone" style="width: 350px;"/>
 </td>
 </tr>
