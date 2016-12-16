@@ -49,7 +49,7 @@ And what does it do with these assemblies?
 
 	#if WINDOWS_UWP
       Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
-      #endif
+    #endif
 
 
 Registrar.RegisterAll(new[] { typeof(ExportRendererAttribute), typeof(ExportCellAttribute), typeof(ExportImageSourceHandlerAttribute) });
