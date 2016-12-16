@@ -82,9 +82,11 @@ On to NControl then - it contains all the necessary Windows-specific stuff, like
 
 This confirmed the true issue; the constructor of my NControlViewRenderer was never getting hit, thus all the great code I had added for UWP wasn't even getting touched :/  
 I've seen this happen before when I forgot to add the assembly attribute above my renderer class.
+
 ```csharp
 [assembly: ExportRenderer(typeof(NControlView), typeof(NControlViewRenderer))]
 ```
+
 but that wasn't the issue here.  It's almost like Xamarin.Forms was totally oblivious of this custom renderer...  But why?  Why?  
 Why...  
 So I searched all the places I usually look: Google, Xamarin Forums/Bugzilla/Docs (_is that the best order?_), pdf copies of books, GitHub issues.  Zero.
