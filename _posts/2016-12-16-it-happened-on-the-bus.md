@@ -46,11 +46,11 @@ Now there have been a few UWP-specific Xamarin.Forms intricacies like this (I'll
 Check it out for yourself in the [offical Xamarin.Forms repo](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WinRT.Tablet/Forms.cs#L28)
 
 And what does it do with these assemblies?
-<pre><code>
-#if WINDOWS_UWP
-    Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
-#endif
-</code></pre>
+
+  #if WINDOWS_UWP
+      Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
+  #endif
+
 
 Registrar.RegisterAll(new[] { typeof(ExportRendererAttribute), typeof(ExportCellAttribute), typeof(ExportImageSourceHandlerAttribute) });
 
