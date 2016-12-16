@@ -33,7 +33,7 @@ Here's a comparison of the Live Visual Tree:
 </td>
 
 <td style="vertical-align: top">
-<img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree - No NControl.png" alt="NControl is gone" style="width: 350px;"/>
+<img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree - No NControl.png" alt="NControl is gone" style="width: 375px;"/>
 </td>
 </tr>
 </table>
