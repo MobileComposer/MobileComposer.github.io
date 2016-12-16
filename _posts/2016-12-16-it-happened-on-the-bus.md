@@ -21,7 +21,7 @@ Impressively, NControl currently supports native custom renderers for 6 platform
 
 Here's a comparison of the Live Visual Tree:  
 The first is **without** .NET Native (Release build) enabled
-![Live Visual Tree.png]({{site.baseurl}}/images/2016-12-16/Live Visual Tree.png =200x)
+<img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree.png" alt="NControl is in Visual Tree" style="width: 200px;"/>
 
 and the 2nd is with it.  Look, no NControl! 
 ![Live Visual Tree - No NControl.png]({{site.baseurl}}/images/2016-12-16/Live Visual Tree - No NControl.png =200x)
