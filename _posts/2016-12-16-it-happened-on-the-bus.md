@@ -13,11 +13,27 @@ We've been using the NControl library in this app for a while and it's been a gr
 Here's a little sample of how to draw something:
 
 ```csharp
-var canvas = NGraphics.UWP.Platforms.Current.CreateImageCanvas(new NGraphics.Size(200, 200));
-var skyBrush = new NGraphics.LinearGradientBrush(NGraphics.Point.Zero, NGraphics.Point.OneY, NGraphics.Colors.Blue, NGraphics.Colors.White);
-canvas.DrawRectangle(new NGraphics.Rect(canvas.Size), new NGraphics.Size(3), null, skyBrush);
-canvas.DrawEllipse(new NGraphics.Rect(10, 10, 50, 50), new NGraphics.Pen(NGraphics.Colors.Yellow, 3), new NGraphics.SolidBrush(NGraphics.Colors.Yellow));
+var width = 200;
+var height = 200;
+
+var frame = new NGraphics.Rect(-width/2, 0, width, height);
+var corner = new NGraphics.Size(1, 1);
+var pen = new NGraphics.Pen(NGraphics.Colors.Blue, 0);
+
+var point1 = new NGraphics.Point(0, 0); // these don't seem to have any effect on the gradient
+var point2 = new NGraphics.Point(0, 0);
+var brush = new NGraphics.LinearGradientBrush(point1, point2, NGraphics.Colors.Blue, NGraphics.Colors.Green);
+
+var control = new NControlView
+{
+    DrawingFunction = (canvas, rect) =>
+    {
+        canvas.DrawRectangle(frame, corner, pen, brush);
+    },
+    HorizontalOptions = LayoutOptions.Center
+};
 ```
+![Screen Shot 2016-12-16 at 4.01.43 PM.png]({{site.baseurl}}/_posts/Screen Shot 2016-12-16 at 4.01.43 PM.png)
 
 (Note that the docs on the GitHub page are a bit out of date)
 
