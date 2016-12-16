@@ -21,7 +21,13 @@ Impressively, NControl currently supports native custom renderers for 6 platform
 
 Debugging the issue has been a process of examining each component and revisiting the code I wrote, starting at the lowest layer, NGraphics.  The good news there is that it works fine when compiled with .NET Native.  Sweet!  This also gave me the chance to improve things a bit and submit a pull request back to the library (more on that below). 
 On to NControl then - it contains all the necessary Windows-specific stuff, like a Windows.UI.Xaml.Controls.Canvas, and helpers to convert the NGraphics.Brush to a Windows.UI.Xaml.Media.Brush, but most importantly, a Custom Renderer that renders an NControlView as a Windows.UI.Xaml.Controls.Grid that can be displayed on UWP.  Hooking the NControl source to my repro project seemed to be the best approach.  As you may have guessed, debugging a .NET Native compiled app is a little different.  Check out [this post on MSDN](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/) for directions.
-This confirmed the true issue; the constructor of my NControlViewRenderer was never getting hit, thus all the great code I had added for UWP wasn't even getting touched :/  I've seen this happen before when I forgot to add the assembly attribute above my renderer class: [assembly: ExportRenderer(typeof(NControlView), typeof(NControlViewRenderer))] - but that wasn't the issue here.  It's almost like Xamarin.Forms was oblivious of this custom renderer...  But why?  Why? Why...  So I searched all the places I usually look: Google, Xamarin Forums/Bugzilla/Docs (is that the best order?), pdf copies of books, GitHub issues.  Zero.
+This confirmed the true issue; the constructor of my NControlViewRenderer was never getting hit, thus all the great code I had added for UWP wasn't even getting touched :/  
+I've seen this happen before when I forgot to add the assembly attribute above my renderer class: 
+<pre><code>
+[assembly: ExportRenderer(typeof(NControlView), typeof(NControlViewRenderer))]
+</code></pre> - but that wasn't the issue here.  It's almost like Xamarin.Forms was totally oblivious of this custom renderer...  But why?  Why?  
+Why...  
+So I searched all the places I usually look: Google, Xamarin Forums/Bugzilla/Docs (_is that the best order?_), pdf copies of books, GitHub issues.  Zero.
 
 It was then that I hit the point that I often hit when troubleshooting development issues: This problem can't be this huge.  If no 3rd party library's custom renderers work in Xamarin.Forms apps in the Windows Store, that would be a HUGE deal.  It can't be that hundreds of Xamarin developers around the globe are having this issue, can it?  It'd have turned up in a search somewhere, right?  Someone has got to be writing UWP apps for the Windows Store, right?  (maybe not...)
 
