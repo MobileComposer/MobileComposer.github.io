@@ -53,10 +53,11 @@ And what does it do with these assemblies?
 
 	Registrar.RegisterAll(new[] { typeof(ExportRendererAttribute), typeof(ExportCellAttribute), typeof(ExportImageSourceHandlerAttribute) });
 
-And why would you want to register these extra assemblies?
-https://developer.xamarin.com/guides/xamarin-forms/platform-features/windows/installation/universal/#Troubleshooting
+And why would you want to register these extra assemblies? According to Xamarin:
 
 > "Xamarin.Forms may be unable to load objects from those assemblies (such as custom renderers)."  But the documentation is a little murky here - there are directions to use this UWP-specific overload, but it's described as a fix for the "Target Invocation Exception" when using "Compile with .NET Native tool chain".  I wasn't seeing any exceptions, so the entire section under this heading wasn't on my radar at all.  The app ran great.  Blissfully unaware that my NControlView should be displayed on the screen.
+
+[link](https://developer.xamarin.com/guides/xamarin-forms/platform-features/windows/installation/universal/#Troubleshooting)
 
 In fact, I found that this is a requirement for ALL custom renderers that live in a 3rd party library.  For example, our app has a custom renderer for playing videos.  It has an implementation for each platform (iOS & UWP) that lives in its respective platform-specific projects, and this renderer works great.  However, in addition to NControl, we're also using the popular Xamarin Image Circle Control plugin and it isn't working correctly in .NET Native builds, leaving the images square.  Same issue.
 
