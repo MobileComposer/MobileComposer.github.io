@@ -82,8 +82,8 @@ In fact, I found that this is a requirement for ALL custom renderers that live i
 	// For .NET Native compilation, you have to tell Xamarin.Forms which assemblies it should scan for custom controls and renderers
 	var rendererAssemblies = new[]
 	{
-    	typeof(NControl.UWP.NControlViewRenderer).GetTypeInfo().Assembly,
-    	typeof(ImageCircle.Forms.Plugin.UWP.ImageCircleRenderer).GetTypeInfo().Assembly
+    typeof(NControl.UWP.NControlViewRenderer).GetTypeInfo().Assembly,
+    typeof(ImageCircle.Forms.Plugin.UWP.ImageCircleRenderer).GetTypeInfo().Assembly
 	};
 	
     // Then call Init with these assembiles
