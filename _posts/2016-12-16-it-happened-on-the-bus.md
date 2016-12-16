@@ -11,7 +11,7 @@ For me, it means that our app can make the long journey into the Windows Store a
 We've been using the NControl library in this app for a while and it's been a great tool for drawing custom vector graphics via code.  [NControl](https://github.com/chrfalch/NControl) is a simple Xamarin.Forms wrapper control around the library that does the drawing, NGraphics.  
 [NGraphics](https://github.com/praeclarum/NGraphics) is a cross platform library for rendering vector graphics on .NET.  It provides a unified API for both immediate (display to screen) and retained mode (save .png file to disk) graphics using high quality native renderers.
 
-Here's a little sample of how to draw something:
+Here's a little sample of how to draw something and place it in an NControl:
 
 ```csharp
 var width = 200;
@@ -33,6 +33,8 @@ var control = new NControlView
     },
     HorizontalOptions = LayoutOptions.Center
 };
+
+// Then put it on your Xamarin.Forms page
 ```
 
 And this is the result  
