@@ -79,7 +79,7 @@ Now there have been a few UWP-specific Xamarin.Forms ah... _intricacies_ like th
 
 ```csharp
 #if WINDOWS_UWP
-	public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
+ public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
 #else
 ```
 
@@ -89,7 +89,7 @@ And what does it do with these assemblies?
 
 ```csharp
 #if WINDOWS_UWP
-	Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
+ Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
 #endif
 
 Registrar.RegisterAll(new[] { typeof(ExportRendererAttribute), typeof(ExportCellAttribute), typeof(ExportImageSourceHandlerAttribute) });
@@ -112,21 +112,25 @@ The only answer I've heard from Xamarin was from James: "_Mostly you just need t
 
 6 days in the making, here's the bit of code that corrected it:
 
-	// For .NET Native compilation, you have to tell Xamarin.Forms which assemblies it should scan for custom controls and renderers
-	var rendererAssemblies = new[]
-	{
-    typeof(NControl.UWP.NControlViewRenderer).GetTypeInfo().Assembly,
-    typeof(ImageCircle.Forms.Plugin.UWP.ImageCircleRenderer).GetTypeInfo().Assembly
-	};
+```csharp
+// For .NET Native compilation, you have to tell Xamarin.Forms which assemblies it should scan for custom controls and renderers
+var rendererAssemblies = new[]
+{
+	typeof(NControl.UWP.NControlViewRenderer).GetTypeInfo().Assembly,
+	typeof(ImageCircle.Forms.Plugin.UWP.ImageCircleRenderer).GetTypeInfo().Assembly
+};
 	
-    // Then call Init with these assembiles
-	Xamarin.Forms.Forms.Init(e, rendererAssemblies);
+// Then call Init with these assembiles
+Xamarin.Forms.Forms.Init(e, rendererAssemblies);
+```
 
 Even though I was calling the Init methods on these libraries:
 
-	ImageCircleRenderer.Init();
-	NControl.UWP.NControlViewRenderer.Init();
-    
+```csharp
+ImageCircleRenderer.Init();
+NControl.UWP.NControlViewRenderer.Init();
+```    
+
 Without the above code, you get nothing in UWP with .NET Native builds.  No exceptions are thrown.  Nothing in the debug output window.  Nothing on screen.  Silent failure.
 
 
