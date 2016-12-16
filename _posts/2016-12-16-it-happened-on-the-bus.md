@@ -7,7 +7,9 @@ Over the last few weeks we've noticed that a **lot** happens in your UWP project
 
 For me, it means that our app can make the long journey into the Windows Store and none of the code-drawn graphics will be displayed on screen.  **Oops**.
 
-We've been using the NControl library in this app for a while and it's been a great tool for drawing custom vector graphics via code.  [NControl](https://github.com/chrfalch/NControl) is a simple Xamarin.Forms wrapper control around the library that does the drawing, NGraphics.  [NGraphics](https://github.com/praeclarum/NGraphics) is a cross platform library for rendering vector graphics on .NET.  It provides a unified API for both immediate (display to screen) and retained mode (save .png file to disk) graphics using high quality native renderers.
+We've been using the NControl library in this app for a while and it's been a great tool for drawing custom vector graphics via code.  
+[NControl](https://github.com/chrfalch/NControl) is a simple Xamarin.Forms wrapper control around the library that does the drawing, NGraphics.  
+[NGraphics](https://github.com/praeclarum/NGraphics) is a cross platform library for rendering vector graphics on .NET.  It provides a unified API for both immediate (display to screen) and retained mode (save .png file to disk) graphics using high quality native renderers.
 
 Here's a little sample of how to draw something
 
@@ -20,8 +22,8 @@ Impressively, NControl currently supports native custom renderers for 6 platform
 Here's a comparison of the Live Visual Tree:   
 <table>
 <tr>
-<td>Without .NET Native (Release build) enabled</td>
-<td>With it enabled</td>
+<td>Here without .NET Native (Release build) enabled</td>
+<td>And now with it enabled</td>
 </tr>
 <tr>
 <td style="vertical-align: top">
