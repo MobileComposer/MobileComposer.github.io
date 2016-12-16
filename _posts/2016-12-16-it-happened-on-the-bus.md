@@ -39,17 +39,17 @@ So I left work curious (I'd recommend it), and decided to Google just a bit on t
 
 Now there have been a few UWP-specific Xamarin.Forms intricacies like this (I'll post on them later).  Some aren't documented at all, and some are, but not very well, like this one.  There is a special overload of the Forms.Init method just for UWP in which you can pass in an IEnumerable called rendererAssemblies:
 
-  #if WINDOWS_UWP
+	#if WINDOWS_UWP
       public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
-  #else
+	#else
 
 Check it out for yourself in the [offical Xamarin.Forms repo](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WinRT.Tablet/Forms.cs#L28)
 
 And what does it do with these assemblies?
 
-  #if WINDOWS_UWP
+	#if WINDOWS_UWP
       Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
-  #endif
+  	#endif
 
 
 Registrar.RegisterAll(new[] { typeof(ExportRendererAttribute), typeof(ExportCellAttribute), typeof(ExportImageSourceHandlerAttribute) });
