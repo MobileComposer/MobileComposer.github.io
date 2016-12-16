@@ -13,7 +13,7 @@ We've been using the NControl library in this app for a while and it's been a gr
 Here's a little sample of how to draw something:
 
 	var canvas = NGraphics.UWP.Platforms.Current.CreateImageCanvas(new NGraphics.Size(200, 200));
-	var skyBrush = new NGraphics.LinearGradientBrush(NGraphics.Point.Zero, NGraphics.Point.OneY, 	NGraphics.Colors.Blue, NGraphics.Colors.White);
+	var skyBrush = new NGraphics.LinearGradientBrush(NGraphics.Point.Zero, NGraphics.Point.OneY, NGraphics.Colors.Blue, NGraphics.Colors.White);
 	canvas.DrawRectangle(new NGraphics.Rect(canvas.Size), new NGraphics.Size(3), null, skyBrush);
 	canvas.DrawEllipse(new NGraphics.Rect(10, 10, 50, 50), new NGraphics.Pen(NGraphics.Colors.Yellow, 3), new NGraphics.SolidBrush(NGraphics.Colors.Yellow));
 
