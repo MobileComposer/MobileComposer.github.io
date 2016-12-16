@@ -25,6 +25,8 @@ The first is **without** .NET Native (Release build) enabled
 
 and the 2nd is with it.  Look, no NControl! 
 ![Live Visual Tree - No NControl.png]({{site.baseurl}}/images/2016-12-16/Live Visual Tree - No NControl.png)
+totally gone
+
   
 # Debugging .NET Native
 
