@@ -76,7 +76,9 @@ But the [little snippet of "documentation"](https://developer.xamarin.com/guides
 In fact, I found that this is a requirement for ALL custom renderers that live in a 3rd party library.  For example, our app has a custom renderer for playing videos.  It has an implementation for each platform (iOS & UWP) that lives in its respective platform-specific projects, and this renderer works great.  However, in addition to NControl, we're also using the popular Xamarin Image Circle Control plugin and it isn't working correctly in .NET Native builds, leaving the images square.  Same issue.
 
 
-[Reach to to James M. and ask which are necessary]
+So what other assemblies do we have to include? 
+You may notice if you look at the Xamarin Evolve source code that James seemed to add everything and the kitchen sink in his Evolve app. Not sure if all that is needed.
+The only answer I've heard from Xamarin was from James: "Mostly you just need third party ones. I just did them all lol cause I wasn’t sure to be honest"
 
 
 # The Fix
@@ -108,5 +110,5 @@ If you are interested in using NControl or NGraphics on UWP, check out my pull r
 
 I'd love it if you would 1.) try it out and 2.) give any feedback on how it could be improved.  I'm really excited about this, my first PR to an open source library, so let's work together people!
 
-Tom Sexter
+--> Tom
 
