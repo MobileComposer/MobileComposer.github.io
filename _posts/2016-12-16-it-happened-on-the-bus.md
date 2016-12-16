@@ -35,7 +35,7 @@ var control = new NControlView
 ```
 
 And this is the result  
-<img src="{{site.baseurl}}/images/2016-12-16/Screen Shot 2016-12-16 at 4.01.43 PM.png" style="width: 200px;"/> 
+<img src="{{site.baseurl}}/images/2016-12-16/SampleNControl.png" style="width: 200px;"/> 
 
 (Note that the docs on the GitHub page are a bit out of date)
 
@@ -49,11 +49,11 @@ Here's a comparison of the Live Visual Tree:
 </tr>
 <tr>
 <td style="vertical-align: top">
-<img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree.png" alt="NControl is in Visual Tree" style="width: 350px;"/> 
+<img src="{{site.baseurl}}/images/2016-12-16/LVT1.png" alt="NControl is in Visual Tree" style="width: 350px;"/> 
 </td>
 
 <td style="vertical-align: top">
-<img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree - No NControl.png" alt="NControl is gone" style="width: 375px;"/>
+<img src="{{site.baseurl}}/images/2016-12-16/LVT2.png" alt="NControl is gone" style="width: 375px;"/>
 </td>
 </tr>
 </table>
