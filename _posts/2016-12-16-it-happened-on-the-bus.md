@@ -7,15 +7,17 @@ Over the last few weeks we've noticed that a **lot** happens in your UWP project
 
 For me, it means that our app can make the long journey into the Windows Store and none of the code-drawn graphics will be displayed on screen.  **Oops**.
 
-We've been using the NControl library in this app for a while and it's been a great tool for drawing custom vector graphics via code.  
-[NControl](https://github.com/chrfalch/NControl) is a simple Xamarin.Forms wrapper control around the library that does the drawing, NGraphics.  
+We've been using the NControl library in this app for a while and it's been a great tool for drawing custom vector graphics via code.  [NControl](https://github.com/chrfalch/NControl) is a simple Xamarin.Forms wrapper control around the library that does the drawing, NGraphics.  
 [NGraphics](https://github.com/praeclarum/NGraphics) is a cross platform library for rendering vector graphics on .NET.  It provides a unified API for both immediate (display to screen) and retained mode (save .png file to disk) graphics using high quality native renderers.
 
-Here's a little sample of how to draw something
+Here's a little sample of how to draw something:
 
+	var canvas = NGraphics.UWP.Platforms.Current.CreateImageCanvas(new NGraphics.Size(200, 200));
+	var skyBrush = new NGraphics.LinearGradientBrush(NGraphics.Point.Zero, NGraphics.Point.OneY, 	NGraphics.Colors.Blue, NGraphics.Colors.White);
+	canvas.DrawRectangle(new NGraphics.Rect(canvas.Size), new NGraphics.Size(3), null, skyBrush);
+	canvas.DrawEllipse(new NGraphics.Rect(10, 10, 50, 50), new NGraphics.Pen(NGraphics.Colors.Yellow, 3), new NGraphics.SolidBrush(NGraphics.Colors.Yellow));
 
 (Note that the docs on the GitHub page are a bit out of date)
-
 
 Impressively, NControl currently supports native custom renderers for 6 platforms: iOS, Android, Windows Phone (8, 8.1, and Silverlight 8.1), and Windows Store (Windows 8.1), but was lacking support for UWP (Windows 10).  I built this out about 6 months ago and it's been working really well in our project since.  Imagine my surprise when it simply didn't work at all in release mode :/  When adding UWP support for these libraries, I used a common "monkey-see, monkey-do" approach, not knowing much of the graphic-y bits in the libraries.  So naturally, I assumed that the monkey messed something up along the way.
 
