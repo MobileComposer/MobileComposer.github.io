@@ -89,9 +89,14 @@ In fact, I found that this is a requirement for ALL custom renderers that live i
     // Then call Init with these assembiles
 	Xamarin.Forms.Forms.Init(e, rendererAssemblies);
 
-Even though I was calling the Init methods on these libraries, without the above code, you get nothing in UWP with .NET Native builds.  No exceptions are thrown.  Nothing in the debug output window.  Nothing on screen.  Silent failure.
-ImageCircleRenderer.Init();
-NControl.UWP.NControlViewRenderer.Init();
+Even though I was calling the Init methods on these libraries:
+
+	ImageCircleRenderer.Init();
+	NControl.UWP.NControlViewRenderer.Init();
+    
+Without the above code, you get nothing in UWP with .NET Native builds.  No exceptions are thrown.  Nothing in the debug output window.  Nothing on screen.  Silent failure.
+
+
 
 I feel that this should be documented better.  Hence this blog post.
 
@@ -99,5 +104,5 @@ If you are interested in using NControl or NGraphics on UWP, check out my pull r
 
 I'd love it if you would 1.) try it out and 2.) give any feedback on how it could be improved.  I'm really excited about this, my first PR to an open source library, so let's work together people!
 
-- Tom Sexter
+Tom Sexter
 
