@@ -76,14 +76,17 @@ One line in an unrelated library's FAQ section about license keys:
 AH!  That makes so much sense!
 
 Now there have been a few UWP-specific Xamarin.Forms ah... _intricacies_ like this (I'll post on them later).  Some aren't documented at all, and some are, but not very well, like this one.  There is a special overload of the Forms.Init method just for UWP in which you can pass in an IEnumerable called rendererAssemblies:
+
 ```csharp
 #if WINDOWS_UWP
         public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
 #else
 ```
+
 (BTW, you can check it out for yourself in the [offical Xamarin.Forms repo here)](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WinRT.Tablet/Forms.cs#L28)
 
 And what does it do with these assemblies?
+
 ```csharp
 #if WINDOWS_UWP
         Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
