@@ -45,7 +45,7 @@ Here's a comparison of the Live Visual Tree:
 <table>
 <tr>
 <td>Here without .NET Native (Release build) enabled</td>
-<td>And with it enabled</td>
+<td>And with it enabled. Ta-da! no NControl!</td>
 </tr>
 <tr>
 <td style="vertical-align: top">
@@ -53,7 +53,7 @@ Here's a comparison of the Live Visual Tree:
 </td>
 
 <td style="vertical-align: top">
-<img src="{{site.baseurl}}/images/2016-12-16/LVT2.png" alt="NControl is gone" style="width: 375px;"/>
+<img src="{{site.baseurl}}/images/2016-12-16/LVT2.png" alt="NControl is gone" style="width: 350px;"/>
 </td>
 </tr>
 </table>
