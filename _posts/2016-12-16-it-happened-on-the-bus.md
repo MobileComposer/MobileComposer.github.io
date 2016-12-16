@@ -20,11 +20,8 @@ Here's a little sample of how to draw something
 Impressively, NControl currently supports native custom renderers for 6 platforms: iOS, Android, Windows Phone (8, 8.1, and Silverlight 8.1), and Windows Store (Windows 8.1), but was lacking support for UWP (Windows 10).  I built this out about 6 months ago and it's been working really well in our project since.  Imagine my surprise when it simply didn't work at all in release mode :/  When adding UWP support for these libraries, I used a common "monkey-see, monkey-do" approach, not knowing much of the graphic-y bits in the libraries.  So naturally, I assumed that the monkey messed something up along the way.
 
 Here's a comparison of the Live Visual Tree:  
-The first is **without** .NET Native (Release build) enabled
-<img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree.png" alt="NControl is in Visual Tree" style="width: 400px;"/>
-
-and the 2nd is with it.  Look, no NControl! 
-<img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree - No NControl.png" alt="NControl is gone" style="width: 400px;"/>
+The first is **without** .NET Native (Release build) enabled, and the 2nd is with it.  Look, no NControl! 
+<img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree.png" alt="NControl is in Visual Tree" style="width: 400px;"/> <img src="{{site.baseurl}}/images/2016-12-16/Live Visual Tree - No NControl.png" alt="NControl is gone" style="width: 400px;"/>
 
   
 # Debugging .NET Native
