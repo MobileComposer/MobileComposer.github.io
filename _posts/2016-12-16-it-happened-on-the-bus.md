@@ -42,7 +42,8 @@ And this is the result
 
 (Note that the docs on the GitHub page are a bit out of date)
 
-Impressively, NControl currently supports native custom renderers for 6 platforms:  
+Impressively, NControl currently supports native custom renderers for 6 platforms:
+
 - iOS
 - Android
 - Windows Phone (8, 8.1, and Silverlight 8.1)
