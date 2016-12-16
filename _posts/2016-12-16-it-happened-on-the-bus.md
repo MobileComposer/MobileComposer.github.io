@@ -64,6 +64,7 @@ And what does it do with these assemblies?
 	Registrar.RegisterAll(new[] { typeof(ExportRendererAttribute), typeof(ExportCellAttribute), typeof(ExportImageSourceHandlerAttribute) });
 
 And why would you want to register these extra assemblies?
+
 > "Xamarin.Forms may be unable to load objects from those assemblies (such as custom renderers)."  
 
 But the [little snippet of "documentation"](https://developer.xamarin.com/guides/xamarin-forms/platform-features/windows/installation/universal/#Troubleshooting) is a little murky here - there are directions to use this UWP-specific overload, but it's described as a fix for the "Target Invocation Exception" when using "Compile with .NET Native tool chain".  I wasn't seeing any exceptions, so the entire section under this heading wasn't on my radar at all.  The app ran great.  Blissfully unaware that my NControlView should be displayed on the screen.
@@ -71,4 +72,28 @@ But the [little snippet of "documentation"](https://developer.xamarin.com/guides
 In fact, I found that this is a requirement for ALL custom renderers that live in a 3rd party library.  For example, our app has a custom renderer for playing videos.  It has an implementation for each platform (iOS & UWP) that lives in its respective platform-specific projects, and this renderer works great.  However, in addition to NControl, we're also using the popular Xamarin Image Circle Control plugin and it isn't working correctly in .NET Native builds, leaving the images square.  Same issue.
 
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+[Reach to to James M. and ask which are necessary]
+
+## The Fix
+
+6 days in the making, here's the bit of code that corrected it:
+
+	// For .NET Native compilation, you have to tell Xamarin.Forms which assemblies it should scan for custom controls and renderers
+	var rendererAssemblies = new[]
+{
+    typeof(NControl.UWP.NControlViewRenderer).GetTypeInfo().Assembly,
+    typeof(ImageCircle.Forms.Plugin.UWP.ImageCircleRenderer).GetTypeInfo().Assembly
+};
+
+	Xamarin.Forms.Forms.Init(e, rendererAssemblies);
+
+Even though I was calling the Init methods on these libraries, without the above code, you get nothing in UWP with .NET Native builds.  No exceptions are thrown.  Nothing in the debug output window.  Nothing on screen.  Silent failure.
+ImageCircleRenderer.Init();
+NControl.UWP.NControlViewRenderer.Init();
+
+I feel that this should be documented better.  Hence this blog post.
+
+If you are interested in using NControl or NGraphics on UWP, check out my pull requests [here](https://github.com/praeclarum/NGraphics/pull/63) and [here](https://github.com/chrfalch/NControl/pull/71).  
+I'd love it if you would 1.) try it out and 2.) give any feedback on how it could be improved.  I'm really excited about this, my first PR to an open source library, so let's work together people!
+
+
