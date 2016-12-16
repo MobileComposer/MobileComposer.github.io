@@ -32,7 +32,9 @@ but that wasn't the issue here.  It's almost like Xamarin.Forms was totally obli
 Why...  
 So I searched all the places I usually look: Google, Xamarin Forums/Bugzilla/Docs (_is that the best order?_), pdf copies of books, GitHub issues.  Zero.
 
-It was then that I hit the point that I often hit when troubleshooting development issues: This problem can't be this huge.  If no 3rd party library's custom renderers work in Xamarin.Forms apps in the Windows Store, that would be a HUGE deal.  It can't be that hundreds of Xamarin developers around the globe are having this issue, can it?  It'd have turned up in a search somewhere, right?  Someone has got to be writing UWP apps for the Windows Store, right?  (maybe not...)
+It was then that I hit the point that I often hit when troubleshooting development issues
+_This problem can't be this huge._
+If no 3rd party library's custom renderers work in Xamarin.Forms apps in the Windows Store, that would be a HUGE deal.  It can't be that hundreds of Xamarin developers around the globe are having this issue, can it?  It'd have turned up in a search somewhere, right?  Someone has got to be writing UWP apps for the Windows Store, right?  (maybe not...)
 
 
 # Leave Curious
