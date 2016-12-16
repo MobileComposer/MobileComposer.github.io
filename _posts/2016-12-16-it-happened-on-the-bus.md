@@ -22,7 +22,7 @@ Impressively, NControl currently supports native custom renderers for 6 platform
 Here's a comparison of the Live Visual Tree:   
 <table>
 <tr>
-<td>The first is without .NET Native (Release build) enabled, </td>
+<td>The first is without .NET Native (Release build) enabled</td>
 <td>The 2nd is with it. Look, no NControl! </td>
 </tr>
 <tr>
