@@ -79,7 +79,7 @@ Now there have been a few UWP-specific Xamarin.Forms ah... _intricacies_ like th
 
 ```csharp
 #if WINDOWS_UWP
- public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
+    public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
 #else
 ```
 
@@ -89,7 +89,7 @@ And what does it do with these assemblies?
 
 ```csharp
 #if WINDOWS_UWP
- Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
+    Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
 #endif
 
 Registrar.RegisterAll(new[] { typeof(ExportRendererAttribute), typeof(ExportCellAttribute), typeof(ExportImageSourceHandlerAttribute) });
