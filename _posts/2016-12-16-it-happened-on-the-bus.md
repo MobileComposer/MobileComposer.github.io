@@ -23,9 +23,9 @@ Debugging the issue has been a process of examining each component and revisitin
 On to NControl then - it contains all the necessary Windows-specific stuff, like a Windows.UI.Xaml.Controls.Canvas, and helpers to convert the NGraphics.Brush to a Windows.UI.Xaml.Media.Brush, but most importantly, a Custom Renderer that renders an NControlView as a Windows.UI.Xaml.Controls.Grid that can be displayed on UWP.  Hooking the NControl source to my repro project seemed to be the best approach.  As you may have guessed, debugging a .NET Native compiled app is a little different.  Check out [this post on MSDN](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/) for directions.
 This confirmed the true issue; the constructor of my NControlViewRenderer was never getting hit, thus all the great code I had added for UWP wasn't even getting touched :/  
 I've seen this happen before when I forgot to add the assembly attribute above my renderer class.
-<pre><code>
-[assembly: ExportRenderer(typeof(NControlView), typeof(NControlViewRenderer))]
-</code></pre> 
+
+	[assembly: ExportRenderer(typeof(NControlView), typeof(NControlViewRenderer))]
+
 but that wasn't the issue here.  It's almost like Xamarin.Forms was totally oblivious of this custom renderer...  But why?  Why?  
 Why...  
 So I searched all the places I usually look: Google, Xamarin Forums/Bugzilla/Docs (_is that the best order?_), pdf copies of books, GitHub issues.  Zero.
@@ -38,11 +38,11 @@ It was then that I hit the point that I often hit when troubleshooting developme
 So I left work curious (I'd recommend it), and decided to Google just a bit on the bus ride home.  I think the small keyboard on my phone encouraged me to keep the search terse; just the essential keywords of my problem: UWP ".NET Native" ViewRenderer.  And then I found it.  One line in an unrelated library's FAQ section about license keys: "For .NET Native compilation, you have to tell Xamarin.Forms which assemblies it should scan for custom controls and renderers" - AH!  That makes so much sense!
 
 Now there have been a few UWP-specific Xamarin.Forms intricacies like this (I'll post on them later).  Some aren't documented at all, and some are, but not very well, like this one.  There is a special overload of the Forms.Init method just for UWP in which you can pass in an IEnumerable<Assembly> called rendererAssemblies:
-<pre><code>
-#if WINDOWS_UWP
-    public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
-#else
-</code></pre>
+
+  #if WINDOWS_UWP
+      public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
+  #else
+
 Check it out for yourself in the [offical Xamarin.Forms repo](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WinRT.Tablet/Forms.cs#L28)
 
 And what does it do with these assemblies?
