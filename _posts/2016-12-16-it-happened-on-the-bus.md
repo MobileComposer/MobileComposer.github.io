@@ -21,10 +21,10 @@ Impressively, NControl currently supports native custom renderers for 6 platform
 
 Here's a comparison of the Live Visual Tree:  
 The first is **without** .NET Native (Release build) enabled
-![Live Visual Tree.png]({{site.baseurl}}/_posts/Live Visual Tree.png)
+![Live Visual Tree.png]({{site.baseurl}}/images/Live Visual Tree.png)
 
 and the 2nd is with it.  Look, no NControl! 
-![Live Visual Tree - No NControl.png]({{site.baseurl}}/_posts/Live Visual Tree - No NControl.png)
+![Live Visual Tree - No NControl.png]({{site.baseurl}}/images/Live Visual Tree - No NControl.png)
   
 # Debugging .NET Native
 
@@ -122,4 +122,3 @@ I'd love it if you would
 I'm really excited about this, my first PR to an open source library, so let's work together people!
 
 --> Tom
-
