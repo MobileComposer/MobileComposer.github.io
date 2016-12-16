@@ -74,7 +74,7 @@ In fact, I found that this is a requirement for ALL custom renderers that live i
 
 [Reach to to James M. and ask which are necessary]
 
-<&nbsp;>
+
 # The Fix
 
 6 days in the making, here's the bit of code that corrected it:
