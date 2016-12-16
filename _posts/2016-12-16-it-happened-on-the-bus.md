@@ -22,7 +22,7 @@ Impressively, NControl currently supports native custom renderers for 6 platform
 Debugging the issue has been a process of examining each component and revisiting the code I wrote, starting at the lowest layer, NGraphics.  The good news there is that it works fine when compiled with .NET Native.  Sweet!  This also gave me the chance to improve things a bit and submit a pull request back to the library (more on that below). 
 On to NControl then - it contains all the necessary Windows-specific stuff, like a Windows.UI.Xaml.Controls.Canvas, and helpers to convert the NGraphics.Brush to a Windows.UI.Xaml.Media.Brush, but most importantly, a Custom Renderer that renders an NControlView as a Windows.UI.Xaml.Controls.Grid that can be displayed on UWP.  Hooking the NControl source to my repro project seemed to be the best approach.  As you may have guessed, debugging a .NET Native compiled app is a little different.  Check out [this post on MSDN](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/29/debugging-net-native-windows-universal-apps/) for directions.
 This confirmed the true issue; the constructor of my NControlViewRenderer was never getting hit, thus all the great code I had added for UWP wasn't even getting touched :/  
-I've seen this happen before when I forgot to add the assembly attribute above my renderer class - something like this:
+I've seen this happen before when I forgot to add the assembly attribute above my renderer class.
 <pre><code>
 [assembly: ExportRenderer(typeof(NControlView), typeof(NControlViewRenderer))]
 </code></pre> 
@@ -62,4 +62,3 @@ In fact, I found that this is a requirement for ALL custom renderers that live i
 
 
 Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
-
