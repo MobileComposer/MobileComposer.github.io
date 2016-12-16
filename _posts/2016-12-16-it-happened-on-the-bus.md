@@ -34,7 +34,7 @@ var control = new NControlView
 };
 ```
 
-And this is the result
+And this is the result  
 
 ![Screen Shot 2016-12-16 at 4.01.43 PM.png]({{site.baseurl}}/images/2016-12-16/Screen Shot 2016-12-16 at 4.01.43 PM.png)
 
