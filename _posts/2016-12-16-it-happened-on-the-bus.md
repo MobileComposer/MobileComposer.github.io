@@ -37,7 +37,7 @@ It was then that I hit the point that I often hit when troubleshooting developme
 
 So I left work curious (I'd recommend it), and decided to Google just a bit on the bus ride home.  I think the small keyboard on my phone encouraged me to keep the search terse; just the essential keywords of my problem: UWP ".NET Native" ViewRenderer.  And then I found it.  One line in an unrelated library's FAQ section about license keys: "For .NET Native compilation, you have to tell Xamarin.Forms which assemblies it should scan for custom controls and renderers" - AH!  That makes so much sense!
 
-Now there have been a few UWP-specific Xamarin.Forms intricacies like this (I'll post on them later).  Some aren't documented at all, and some are, but not very well, like this one.  There is a special overload of the Forms.Init method just for UWP in which you can pass in an IEnumerable<Assembly> called rendererAssemblies:
+Now there have been a few UWP-specific Xamarin.Forms intricacies like this (I'll post on them later).  Some aren't documented at all, and some are, but not very well, like this one.  There is a special overload of the Forms.Init method just for UWP in which you can pass in an IEnumerable called rendererAssemblies:
 
   #if WINDOWS_UWP
       public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
