@@ -96,6 +96,8 @@ NControl.UWP.NControlViewRenderer.Init();
 I feel that this should be documented better.  Hence this blog post.
 
 If you are interested in using NControl or NGraphics on UWP, check out my pull requests [here](https://github.com/praeclarum/NGraphics/pull/63) and [here](https://github.com/chrfalch/NControl/pull/71).  
+
 I'd love it if you would 1.) try it out and 2.) give any feedback on how it could be improved.  I'm really excited about this, my first PR to an open source library, so let's work together people!
 
+- Tom Sexter
 
