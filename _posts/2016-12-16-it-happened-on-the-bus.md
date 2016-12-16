@@ -77,7 +77,8 @@ In fact, I found that this is a requirement for ALL custom renderers that live i
 
 
 So what other assemblies do we have to include? 
-You may notice if you look at the Xamarin Evolve source code that James seemed to add everything and the kitchen sink in his Evolve app. Not sure if all that is needed.
+You may notice if you look at the Xamarin Evolve [source code](https://github.com/xamarinhq/app-evolve/blob/master/src/XamarinEvolve.UWP/App.xaml.cs#L92) that James seems to add everything and the kitchen sink here. Not sure if all that is needed.
+
 The only answer I've heard from Xamarin was from James: "Mostly you just need third party ones. I just did them all lol cause I wasn’t sure to be honest"
 
 
@@ -103,10 +104,10 @@ Even though I was calling the Init methods on these libraries:
 Without the above code, you get nothing in UWP with .NET Native builds.  No exceptions are thrown.  Nothing in the debug output window.  Nothing on screen.  Silent failure.
 
 
+**I feel that this should be documented better.**  Hence this blog post.
 
-I feel that this should be documented better.  Hence this blog post.
 
-If you are interested in using NControl or NGraphics on UWP, check out my pull requests [here](https://github.com/praeclarum/NGraphics/pull/63) and [here](https://github.com/chrfalch/NControl/pull/71).  
+If you are interested in using NControl or NGraphics on UWP, check out the pull requests [here](https://github.com/praeclarum/NGraphics/pull/63) and [here](https://github.com/chrfalch/NControl/pull/71).  
 
 I'd love it if you would 1.) try it out and 2.) give any feedback on how it could be improved.  I'm really excited about this, my first PR to an open source library, so let's work together people!
 
