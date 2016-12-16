@@ -49,9 +49,9 @@ On to NControl then - it contains all the necessary Windows-specific stuff, like
 
 This confirmed the true issue; the constructor of my NControlViewRenderer was never getting hit, thus all the great code I had added for UWP wasn't even getting touched :/  
 I've seen this happen before when I forgot to add the assembly attribute above my renderer class.
-
-	[assembly: ExportRenderer(typeof(NControlView), typeof(NControlViewRenderer))]
-
+```csharp
+[assembly: ExportRenderer(typeof(NControlView), typeof(NControlViewRenderer))]
+```
 but that wasn't the issue here.  It's almost like Xamarin.Forms was totally oblivious of this custom renderer...  But why?  Why?  
 Why...  
 So I searched all the places I usually look: Google, Xamarin Forums/Bugzilla/Docs (_is that the best order?_), pdf copies of books, GitHub issues.  Zero.
@@ -76,20 +76,21 @@ One line in an unrelated library's FAQ section about license keys:
 AH!  That makes so much sense!
 
 Now there have been a few UWP-specific Xamarin.Forms ah... _intricacies_ like this (I'll post on them later).  Some aren't documented at all, and some are, but not very well, like this one.  There is a special overload of the Forms.Init method just for UWP in which you can pass in an IEnumerable called rendererAssemblies:
-
-	#if WINDOWS_UWP
-      public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
-	#else
-
+```csharp
+#if WINDOWS_UWP
+        public static void Init(IActivatedEventArgs launchActivatedEventArgs, IEnumerable<Assembly> rendererAssemblies = null)
+#else
+```
 (BTW, you can check it out for yourself in the [offical Xamarin.Forms repo here)](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WinRT.Tablet/Forms.cs#L28)
 
 And what does it do with these assemblies?
+```csharp
+#if WINDOWS_UWP
+        Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
+#endif
 
-	#if WINDOWS_UWP
-      Registrar.ExtraAssemblies = rendererAssemblies?.ToArray();
-    #endif
-
-	Registrar.RegisterAll(new[] { typeof(ExportRendererAttribute), typeof(ExportCellAttribute), typeof(ExportImageSourceHandlerAttribute) });
+Registrar.RegisterAll(new[] { typeof(ExportRendererAttribute), typeof(ExportCellAttribute), typeof(ExportImageSourceHandlerAttribute) });
+```
 
 And why would you want to register these extra assemblies?
 
