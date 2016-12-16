@@ -17,7 +17,7 @@ We've been using the NControl library in this app for a while and it's been a gr
 Impressively, NControl currently supports native custom renderers for 6 platforms: iOS, Android, Windows Phone (8, 8.1, and Silverlight 8.1), and Windows Store (Windows 8.1), but was lacking support for UWP (Windows 10).  I built this out about 6 months ago and it's been working really well in our project since.  Imagine my surprise when it simply didn't work at all in release mode :/  When adding UWP support for these libraries, I used a common "monkey-see, monkey-do" approach, not knowing much of the graphic-y bits in the libraries.  So naturally, I assumed that the monkey messed something up along the way.
   
   
-## Debugging .NET Native
+# Debugging .NET Native
 
 Debugging the issue has been a process of examining each component and revisiting the code I wrote, starting at the lowest layer, NGraphics.  The good news there is that it works fine when compiled with .NET Native.  Sweet!  This also gave me the chance to improve things a bit and submit a pull request back to the library (more on that below). 
 
@@ -35,7 +35,7 @@ So I searched all the places I usually look: Google, Xamarin Forums/Bugzilla/Doc
 It was then that I hit the point that I often hit when troubleshooting development issues: This problem can't be this huge.  If no 3rd party library's custom renderers work in Xamarin.Forms apps in the Windows Store, that would be a HUGE deal.  It can't be that hundreds of Xamarin developers around the globe are having this issue, can it?  It'd have turned up in a search somewhere, right?  Someone has got to be writing UWP apps for the Windows Store, right?  (maybe not...)
 
 
-## Leave Curious
+# Leave Curious
 
 So I left work curious (I'd recommend it), and decided to Google just a bit on the bus ride home.  I think the small keyboard on my phone encouraged me to keep the search terse; just the essential keywords of my problem: 
 UWP ".NET Native" ViewRenderer
@@ -74,7 +74,8 @@ In fact, I found that this is a requirement for ALL custom renderers that live i
 
 [Reach to to James M. and ask which are necessary]
 
-## The Fix
+<&nbsp;>
+# The Fix
 
 6 days in the making, here's the bit of code that corrected it:
 
