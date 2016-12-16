@@ -11,11 +11,20 @@ For me, it means that our app can make the long journey into the Windows Store a
 
 We've been using the NControl library in this app for a while and it's been a great tool for drawing custom vector graphics via code.  [NControl](https://github.com/chrfalch/NControl) is a simple Xamarin.Forms wrapper control around the library that does the drawing, NGraphics.  [NGraphics](https://github.com/praeclarum/NGraphics) is a cross platform library for rendering vector graphics on .NET.  It provides a unified API for both immediate (display to screen) and retained mode (save .png file to disk) graphics using high quality native renderers.
 
-[show code example and image. Note that the docs are a little out of date.]
+Here's a little sample of how to draw something
+
+
+(Note that the docs on the GitHub page are a bit out of date)
 
 
 Impressively, NControl currently supports native custom renderers for 6 platforms: iOS, Android, Windows Phone (8, 8.1, and Silverlight 8.1), and Windows Store (Windows 8.1), but was lacking support for UWP (Windows 10).  I built this out about 6 months ago and it's been working really well in our project since.  Imagine my surprise when it simply didn't work at all in release mode :/  When adding UWP support for these libraries, I used a common "monkey-see, monkey-do" approach, not knowing much of the graphic-y bits in the libraries.  So naturally, I assumed that the monkey messed something up along the way.
-  
+
+Here's a comparison of the Live Visual Tree:  
+The first is **without** .NET Native (Release build) enabled
+![Live Visual Tree.png]({{site.baseurl}}/_posts/Live Visual Tree.png)
+
+and the 2nd is with it.  Look, no NControl! 
+![Live Visual Tree - No NControl.png]({{site.baseurl}}/_posts/Live Visual Tree - No NControl.png)
   
 # Debugging .NET Native
 
