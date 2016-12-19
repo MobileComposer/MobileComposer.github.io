@@ -12,10 +12,9 @@ layout: default
   {% assign author = site.authors[page.author] %}
   <div class="post">
     <div class="meta">
-      <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}">
+      <img src="http://www.gravatar.com/avatar/{{ author.gravatar }?s=50}">
       <span class="author">{{ author.display_name }}</span>
-      <span class="twitter">{{ author.twitter}}</span>
-      <span class="github">{{ author.github}}</span>
+      <a class="twitter" href="https://twitter.com/{{ author.twitter }}" title="Twitter">Twitter</a>
     </div>
   </div>
 
