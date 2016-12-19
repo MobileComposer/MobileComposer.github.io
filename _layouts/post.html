@@ -13,10 +13,14 @@ layout: default
   <div class="post">
     <div class="meta">
       <br />
-      <br />
-      <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=50">
-      <span class="author">{{ author.display_name }}</span>
-      <div><a href="https://www.twitter.com/{{ author.twitter }}"><i class="svg-icon twitter"></i></a></div>
+      <div>
+        <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+        <span class="author">{{ author.display_name }}</span>
+      </div>
+      <div>
+        <a href="https://www.twitter.com/{{ author.twitter }}"><i class="svg-icon twitter"></i></a>
+        <a href="https://github.com/{{ author.github }}"><i class="svg-icon github"></i></a>
+      </div>
     </div>
   </div>
 
