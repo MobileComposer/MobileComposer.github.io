@@ -13,11 +13,14 @@ layout: default
   <div class="post">
     <div class="meta">
       <br />
-      <div style="display: table; width:100%;">
-        <div style="display: table-cell; vertical-align: middle;">
-          <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
-          <span class="author">{{ author.display_name }}</span>
-        </div>
+      <div>
+        <table>
+          <tr>
+            <td style="vertical-align: middle">
+              <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+              <span class="author">{{ author.display_name }}</span>
+            </td>
+        </table>
       </div>
       <div>
         <a href="https://www.twitter.com/{{ author.twitter }}"><i class="svg-icon twitter"></i></a>
