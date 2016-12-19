@@ -14,7 +14,8 @@ layout: default
 
       <!--<div style="font-style: italic">posted by {{ post.author }} on {{ post.date | date: "%m/%d/%Y" }}</div>-->
       <!--<div style="font-style: italic">posted by {{ page.author.display_name }} on {{ post.date | date: "%m/%d/%Y" }}</div>-->
-      <div style="font-style: italic">posted by {{ site.authors[page.author].display_name }} on {{ post.date | date: "%m/%d/%Y" }}</div>
+      <!--<div style="font-style: italic">posted by {{ site.authors[page.author].display_name }} on {{ post.date | date: "%m/%d/%Y" }}</div>-->
+      <div style="font-style: italic">posted by {{ post.display_name }} on {{ post.date | date: "%m/%d/%Y" }}</div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
