@@ -3,7 +3,10 @@ published: true
 layout: post
 title: It Happened on the Bus
 date: 2016-12-16 05:23
-category: UWP
+tags:
+- UWP
+- Xamarin.Forms
+- .NET Native
 ---
 Over the last few weeks we've noticed that a **lot** happens in your UWP project when you flip the switch from Debug build to Release build mode.  At the heart of it, has been this little check box on the UWP project build properties: "Compile with .NET Native tool chain".  
 <img src="{{site.baseurl}}/images/2016-12-16/CompileCheckBox.png" style="width: 500px;"/>
