@@ -185,4 +185,3 @@ I'd love it if you would
 2.) give any feedback on how it could be improved.  
 I'm really excited about this, my first PR to an open source library, so let's work together people!
 
---> Tom
