@@ -12,7 +12,7 @@ layout: default
         {{ post.excerpt }}
       </div>
 
-      <div>posted on _{{ post.date | date: "%m/%d/%Y" }}_</div>
+      <div style="font-style: italic">posted on {{ post.date | date: "%m/%d/%Y" }}</div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
