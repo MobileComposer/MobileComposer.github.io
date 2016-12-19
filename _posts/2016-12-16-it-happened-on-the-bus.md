@@ -2,8 +2,8 @@
 published: true
 layout: post
 title: It Happened on the Bus
-date: 2016-12-16
 tags: Xamarin.Forms UWP .NETNative
+date: 2016-12-16
 ---
 Over the last few weeks we've noticed that a **lot** happens in your UWP project when you flip the switch from Debug build to Release build mode.  At the heart of it, has been this little check box on the UWP project build properties: "Compile with .NET Native tool chain".  
 <img src="{{site.baseurl}}/images/2016-12-16/CompileCheckBox.png" style="width: 500px;"/>
@@ -112,7 +112,7 @@ One line in an unrelated library's FAQ section about license keys:
 
 AH!  That makes so much sense!
 
-Now there have been a few UWP-specific Xamarin.Forms ah... _intricacies_ like this (I'll post on them later).  Some aren't documented at all, and some are, but not very well, like this one.  There is a special little overload of the Forms.Init method just for UWP in which you can pass in an IEnumerable called rendererAssemblies:
+Now there have been a few UWP-specific Xamarin.Forms ~~obstacles of negligence~~ _intricacies_ like this (I'll post more of them later), that haven't been communicated well by Xamarin.  Some aren't documented at all, and some are, but as an after-thought, like this one.  There is a special, nearly secret, overload of the Forms.Init method just for UWP in which you can pass in an IEnumerable called rendererAssemblies:
 
 ```csharp
 #if WINDOWS_UWP
