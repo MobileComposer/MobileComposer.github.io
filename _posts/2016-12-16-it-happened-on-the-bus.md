@@ -4,6 +4,7 @@ layout: post
 title: It Happened on the Bus
 date: 2016-12-16 05:23
 author: tom
+comments: true
 tags:
 - UWP
 - Xamarin.Forms
@@ -184,4 +185,3 @@ I'd love it if you would
 1.) try it out  
 2.) give any feedback on how it could be improved.  
 I'm really excited about this, my first PR to an open source library, so let's work together people!
-
