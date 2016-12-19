@@ -84,3 +84,11 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+
+authors:
+  tom:
+    display_name: Tom Soderling
+    gravatar: dd103f377899fc63b0b88c5bb62b15bd
+    twitter: tomsoderling
+    github: TomSoderling
