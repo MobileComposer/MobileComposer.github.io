@@ -38,10 +38,14 @@ layout: default
     Scored on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
+
   <!-- Add Disqus section to each post -->
-  <br />
+
+  <!--there is a way to use this instead of the javascript snippet below-->
   <!--{% include disqus.html %}-->
+  
   {% if page.comments %}
+  <br />
   <div id="disqus_thread"></div>
       <script type="text/javascript">
           // RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
