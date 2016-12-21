@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+This blog is a collection of thoughts from the software developers who design, dream, and create the web and mobile experiences at Mobile Composer.
 
-### More Information
+<!--### More Information-->
 
-A place to include any other types of information that you'd like to include about yourself.
+<!--A place to include any other types of information that you'd like to include about yourself.-->
 
-### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+<!--### Contact me-->
+<!--[email@domain.com](mailto:email@domain.com)-->
