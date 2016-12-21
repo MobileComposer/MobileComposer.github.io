@@ -63,7 +63,7 @@ When adding UWP support for these libraries, I used a common "monkey-see, monkey
 Here's a comparison of the Live Visual Tree:   
 <table>
 <tr>
-<td>Here without .NET Native (Release build) enabled</td>
+<td>Here without .NET Native enabled</td>
 <td>And with it enabled. Ta-da! no NControl!</td>
 </tr>
 <tr>
