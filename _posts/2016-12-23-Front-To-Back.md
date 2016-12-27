@@ -16,6 +16,13 @@ As interns, we used Angular JS which is an MV* framework. We use it as an MVC fr
 # ViewModel and Controller
 For this example I will use one of the Admin Screens I created that allows Administrators to manage content through our web application. 
 
+<img src="{{AppBrandList}}/MobileComposer.github.io/_posts/AppBrandList.png" style="width: 500px;"/>
+
+
+
+
+
+
 We use [AngularJS 1.5](https://angularjs.org/) to build out our admin screens, this is an example of a view which is a AppBrandList page that we connect to our controller. 
 ```JavaScript
     <section class="mainbar" data-ng-controller="appBrandController as vm">
