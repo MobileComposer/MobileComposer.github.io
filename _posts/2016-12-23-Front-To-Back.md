@@ -25,7 +25,7 @@ For this example I will use one of the Admin Screens I created that allows Admin
 
 We use [AngularJS 1.5](https://angularjs.org/) to build out our admin screens, this is an example of a view which is a AppBrandList page that we connect to our controller. 
 
-```JavaScript
+```javascript
     <section class="mainbar" data-ng-controller="appBrandController as vm">
         <section class="matter">
             <div class="container">
@@ -47,9 +47,8 @@ A ViewModel is a pattern that encapsulates the presentation state and logic. Our
 This is an example of how we use our view and the ng-controller directive to link this page to our appBrandController file. This is not the full AppBrandList view but only a portion. The first "section class" line is the one that connects to our controller.
 In our controller we declare what modules the controller is dependent on, the one we will look at is the 'datacontext' module. This module allows our viewmodel to access data. The controller controls the application flow of our logic.
 
-{% highlight JavaScript %}
-```JavaScript
 
+```javascript
 var controllerId = 'appBrandController';
 
     angular.module('app')
@@ -57,7 +56,7 @@ var controllerId = 'appBrandController';
 
 
 ```
-{% endhighlight %}
+
 
 
 # Datacontext and Breeze.js
@@ -66,7 +65,7 @@ Our ViewModel does not know how this call is being made it just knows that if it
 In our datacontext we use [Breeze.js](http://www.getbreezenow.com/breezejs) which is a client side JavaScript library that manages data. Breeze.JS allows us to easily query data within our datacontext. An example of a query that we use is below: 
 
 
-```JavaScript
+```javascript
  function _getAppBrands() {
             var orderBy = 'name';
             var appData = [];
