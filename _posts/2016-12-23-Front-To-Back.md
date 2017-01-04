@@ -1,7 +1,7 @@
 ---
-published: false
+published: true
 layout: post
-title: Front End
+title: Overview of Angular JS and Datacontext w/ Breezejs
 date: 2016-12-23 05:23
 author: kam
 comments: true
@@ -16,7 +16,7 @@ As interns, we used Angular JS which is an MV* framework. We use it as an MVC fr
 # ViewModel and Controller
 For this example I will use one of the Admin Screens I created that allows Administrators to manage content through our web application. 
 
-<img src="{{AppBrandList}}/MobileComposer.github.io/images/AppBrandList.png" style="width: 500px;"/>
+<img src="{{AppBrandList}}/MobileComposer.github.io/images/2017-1-2/AppBrandList.png" style="width: 500px;"/>
 
 
 
@@ -24,7 +24,8 @@ For this example I will use one of the Admin Screens I created that allows Admin
 
 
 We use [AngularJS 1.5](https://angularjs.org/) to build out our admin screens, this is an example of a view which is a AppBrandList page that we connect to our controller. 
-```JavaScript
+
+```javascript
     <section class="mainbar" data-ng-controller="appBrandController as vm">
         <section class="matter">
             <div class="container">
@@ -45,8 +46,9 @@ We use [AngularJS 1.5](https://angularjs.org/) to build out our admin screens, t
 A ViewModel is a pattern that encapsulates the presentation state and logic. Our view interacts with this ViewModel, as the ViewModel acts as a intermediary between the view and model.
 This is an example of how we use our view and the ng-controller directive to link this page to our appBrandController file. This is not the full AppBrandList view but only a portion. The first "section class" line is the one that connects to our controller.
 In our controller we declare what modules the controller is dependent on, the one we will look at is the 'datacontext' module. This module allows our viewmodel to access data. The controller controls the application flow of our logic.
-```JavaScript
 
+
+```javascript
 var controllerId = 'appBrandController';
 
     angular.module('app')
@@ -54,11 +56,16 @@ var controllerId = 'appBrandController';
 
 
 ```
+
+
+
 # Datacontext and Breeze.js
 In our controller we explictly list datacontext as a module. The datacontext allows the ViewModel to access data easily. For example if we wanted to access a list of AppBrands that we have in a organization we would just call datacontext.getAppBrands. 
 Our ViewModel does not know how this call is being made it just knows that if it calls this function a list of AppBrands will be returned. 
 In our datacontext we use [Breeze.js](http://www.getbreezenow.com/breezejs) which is a client side JavaScript library that manages data. Breeze.JS allows us to easily query data within our datacontext. An example of a query that we use is below: 
-```JavaScript
+
+
+```javascript
  function _getAppBrands() {
             var orderBy = 'name';
             var appData = [];
