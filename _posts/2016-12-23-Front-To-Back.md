@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Overview of Angular JS and Datacontext w/ Breezejs
 date: 2016-12-23 05:23
