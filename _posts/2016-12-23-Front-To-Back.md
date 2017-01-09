@@ -60,7 +60,7 @@ var controllerId = 'appBrandController';
 
 
 # Datacontext and Breeze.js
-In our controller we explictly list datacontext as a module. The datacontext allows the ViewModel to access data easily. For example if we wanted to access a list of AppBrands that we have in a organization we would just call datacontext.getAppBrands. 
+In our controller we explictly list datacontext as a module. The datacontext allows the ViewModel to access data easily. For example, if we wanted to access a list of AppBrands that we have in a organization we would just call datacontext.getAppBrands. 
 Our ViewModel does not know how this call is being made it just knows that if it calls this function a list of AppBrands will be returned. 
 In our datacontext we use [Breeze.js](http://www.getbreezenow.com/breezejs) which is a client side JavaScript library that manages data. Breeze.JS allows us to easily query data within our datacontext. An example of a query that we use is below: 
 
