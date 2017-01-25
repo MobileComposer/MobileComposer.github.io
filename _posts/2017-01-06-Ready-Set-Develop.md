@@ -17,9 +17,9 @@ Each week we prepared a presentation to show the progress on our project.  Our w
 
 Since starting as a part-time employee for Mobile Composer, I have become the “Analytics Guru”, adventuring my way through incorporating data visualizations with D3.js, and most recently using the Syncfusion Angular 1 charting library.  This has been an amazing learning experience so far, and I greatly look forward to what the future holds with Mobile Composer.
 
-Below is a skill set rating the interns created for our final presentation for the summer.
-<img src="{{site.baseurl}}/images/2017-01-06/StartingSkills.JPG" style="height: 200px; width: 200px">
-<img src="{{site.baseurl}}/images/2017-01-06/EndingSkills.JPG" style="height: 200px; width: 200px">
+Below is a skill set rating the interns created for our final presentation for the summer.<br>
+<img src="{{site.baseurl}}/images/2017-01-06/StartingSkills.JPG" style="height: 200px; width: 250px; float: left">
+<img src="{{site.baseurl}}/images/2017-01-06/EndingSkills.JPG" style="height: 200px; width: 250px; float: left">
 
-The Author
+The Author<br>
 <img src="{{site.baseurl}}/images/2017-01-06/KyleNicole.jpg" style="height: 200px; width: 200px">
