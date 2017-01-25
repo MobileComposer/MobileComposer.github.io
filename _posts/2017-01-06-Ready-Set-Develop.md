@@ -19,5 +19,5 @@ Since starting as a part-time employee for Mobile Composer, I have become the â€
 
 Below is a skill set rating the interns created for our final presentation for the summer.<br>
 <img src="{{site.baseurl}}/images/2017-01-06/StartingSkills.JPG" style="height: 200px; width: 250px; float: left">
-<img src="{{site.baseurl}}/images/2017-01-06/EndingSkills.JPG" style="height: 200px; width: 250px; float: left">
+<img src="{{site.baseurl}}/images/2017-01-06/EndingSkills.JPG" style="height: 200px; width: 250px; float: left: clear: right">
 <br>
