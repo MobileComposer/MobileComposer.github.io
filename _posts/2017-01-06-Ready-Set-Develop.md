@@ -22,4 +22,4 @@ Below is a skill set rating the interns created for our final presentation for t
 <img src="{{site.baseurl}}/images/2017-01-06/EndingSkills.JPG" style="height: 200px; width: 250px; float: left">
 <br><br>
 The Author<br>
-<img src="{{site.baseurl}}/images/2017-01-06/KyleNicole.jpg" style="height: 200px; width: 200px">
+<img src="{{site.baseurl}}/images/2017-01-06/KyleNicole.jpg" style="height: 125; width: 125; float: right">
