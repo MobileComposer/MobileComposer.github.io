@@ -26,14 +26,14 @@ For this example I will use one of the Admin Screens I created that allows Admin
 We use [AngularJS 1.5](https://angularjs.org/) to build out our admin screens, this is an example of a view which is a AppBrandList page that we connect to our controller. 
 
 ```javascript
-    <section class="mainbar" data-ng-controller="appBrandController as vm">
+    <section class="mainbar" data-ng-controller="testController as vm">
         <section class="matter">
             <div class="container">
                 <div class='row'>
                     <div class='col-sm-12'>
                         <div class='box bordered-box blue-border' style='margin-bottom:0;'>
                             <div class='box-header blue-background'>
-                                <div class='title'>App Brands</div>
+                                <div class='title'>Breeze Test</div>
                             </div>
                         </div>
                     </div>
@@ -49,10 +49,10 @@ In our controller we declare what modules the controller is dependent on, the on
 
 
 ```javascript
-var controllerId = 'appBrandController';
+var controllerId = 'testController';
 
     angular.module('app')
-         .controller(controllerId, ['$http', '$rootScope', '$scope', 'common', 'datacontext', '$location', '$route', '$routeParams', 'propsBrand', appBrandController]);
+         .controller(controllerId, ['$http', '$rootScope', '$scope', 'common', 'datacontext', '$location', '$route', '$routeParams', testController]);
 
 
 ```
@@ -66,19 +66,18 @@ In our datacontext we use [Breeze.js](http://www.getbreezenow.com/breezejs) whic
 
 
 ```javascript
- function _getAppBrands() {
+ function _getStuff() {
             var orderBy = 'name';
             var appData = [];
 
-            return EntityQuery.from('AppBrand')
+            return EntityQuery.from('BreezeTest')
                     .orderBy(orderBy)
                     .using(manager).execute()
                     .then(querySucceded, _queryFailed);
 
            
             function querySucceded(data) {
-                appData = data.results;
-                return appData;
+                return data;
             }
         }
 ```
