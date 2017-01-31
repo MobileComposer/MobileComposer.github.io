@@ -1,10 +1,10 @@
 ---
-published: false
 layout: post
 title:  My experience as a Web Developer ... so far
-date: 2017-1-4 16:01
+date: 2017-1-31 16:01
 author: carlos
 comments: true
+published: true
 tags: [JavaScript, Angular JS, Web Development, Mobile Composer, MCTC, ITEC, Entry level developer, Jr. Developer, Junior developer ]
 ---
   
