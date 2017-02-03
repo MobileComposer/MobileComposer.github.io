@@ -28,8 +28,8 @@ The above code results in the following:
 		<td align="center">Android</trd>
 	</tr>
 	<tr>
-		<td><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview.jpg" /></td>
-		<td><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview.jpg" /></td></td>
+		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview.jpg" /></td>
+		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview.jpg" /></td></td>
 	</tr>
 </table>
 
@@ -80,8 +80,8 @@ The above code results in the following:
 		<td align="center">Android</trd>
 	</tr>
 	<tr>
-		<td>![iOS Box View](../images/2017-02-01/iOS-boxview2.jpg "iOS Box View")</td>
-		<td>![Droid Box View](../images/2017-02-01/droid-boxview2.jpg "Droid Box View")</td>
+		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview2.jpg" /></td>
+		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview2.jpg" /></td>
 	</tr>
 </table>
 
@@ -188,8 +188,8 @@ The above code results in the following:
 		<td align="center">Android</trd>
 	</tr>
 	<tr>
-		<td>![iOS Box View](../images/2017-02-01/iOS-boxview3.jpg "iOS Box View")</td>
-		<td>![Droid Box View](../images/2017-02-01/droid-boxview3.jpg "Droid Box View")</td>
+		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview3.jpg" /></td>
+		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview3.jpg" /></td>
 	</tr>
 </table>
 
