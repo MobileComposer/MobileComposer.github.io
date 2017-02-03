@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Easy Access to Image and Object Width & Heights in Xamarin.Forms
 date: 2017-02-01 12:23
@@ -73,7 +73,9 @@ private void HandleBoxViewSizeChanged( object sender, EventArgs e ) {
 	_boxView.TranslationY = ( absoluteLayout.Y + absoluteLayout.Height ) / 2 - ( _boxView.Height / 2 );
 }
 ```
+
 The above code results in the following:
+
 <table>
 	<tr>
 		<td align="center">iOS</td>
@@ -97,9 +99,11 @@ public interface IImageInfo {
 	Tuple<int, int> GetFileWidthAndHeight ( string file );
 }
 ```
+
 We will call this method from our shared Xamarin.Forms code and pass in the path to the image on disk and it will return a Tuple<int,int> which is our image's width and height.
 
 #### The iOS Implementation
+
 ```csharp
 using System;
 using WidthHeightExamples.iOS;
@@ -129,7 +133,9 @@ namespace WidthHeightExamples.iOS {
 	}
 }
 ```
+
 #### The Android Implementation
+
 ```csharp
 using System;
 using WidthHeightExamples.Droid;
@@ -155,6 +161,7 @@ namespace WidthHeightExamples.Droid {
 	}
 }
 ```
+
 In my case I have an PNG image I pulled down from the web and stored in my application's document directory.  This does need to be an image you can get the full path to.  This means that on Android you **cannot** test this with an image you store in your drawable folders as you cannot get the full path to a resource in your drawable directory.
 
 Here is the code:
@@ -181,6 +188,7 @@ private void AddImage() {
 	absoluteLayout.Children.Add ( _image );
 }
 ```
+
 The above code results in the following:
 <table>
 	<tr>
