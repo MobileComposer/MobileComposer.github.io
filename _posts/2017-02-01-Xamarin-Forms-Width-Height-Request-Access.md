@@ -23,7 +23,7 @@ absoluteLayout.Children.Add ( _boxView );
 
 The above code results in the following:
 <div style="margin: 0px auto;">
-<table style="margin: 0px auto; border-spacing: 20px;">
+<table cellpadding="20" style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
 		<td align="center">Android</td>
@@ -78,7 +78,7 @@ private void HandleBoxViewSizeChanged( object sender, EventArgs e ) {
 
 The above code results in the following:
 <div style="margin: 0px auto;">
-<table style="margin: 0px auto; border-spacing: 20px;">
+<table cellpadding="20" style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
 		<td align="center">Android</td>
@@ -191,7 +191,7 @@ private void AddImage() {
 
 The above code results in the following:
 <div style="margin: 0px auto;">
-<table style="margin: 0px auto; border-spacing: 20px;">
+<table cellpadding="20" style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
 		<td align="center">Android</td>
