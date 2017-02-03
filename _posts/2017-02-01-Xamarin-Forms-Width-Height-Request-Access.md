@@ -22,7 +22,8 @@ absoluteLayout.Children.Add ( _boxView );
 ```
 
 The above code results in the following:
-<table>
+<div style="margin: 0px auto;">
+<table style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
 		<td align="center">Android</td>
@@ -32,6 +33,7 @@ The above code results in the following:
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview.jpg" /></td>
 	</tr>
 </table>
+</div>
 
 But why isn't the red box centered!?  This may make sense to someone more experienced using AbsoluteLayout in Xamarin.Forms, but to someone starting out there is no point in using HorizontalOptions or VerticalOptions on an object whose parent is an AbsoluteLayout.  All child objects of AbsoluteLayout must be explicitly assigned their positioning on screen.  You would also find out that if you were to try and Debug.WriteLine the _boxView Width and or Height it is indeed -1.    So how do we get the size of the _boxView object, we wait!
 
@@ -75,7 +77,8 @@ private void HandleBoxViewSizeChanged( object sender, EventArgs e ) {
 ```
 
 The above code results in the following:
-<table>
+<div style="margin: 0px auto;">
+<table style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
 		<td align="center">Android</td>
@@ -85,6 +88,7 @@ The above code results in the following:
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview2.jpg" /></td>
 	</tr>
 </table>
+</div>
 
 Wiring up the SizeChanged event handler allowed us capture the moment the size of the BoxView is updated, and from there we are able to reposition the BoxView to the center doing some basic math.
 
@@ -186,7 +190,8 @@ private void AddImage() {
 ```
 
 The above code results in the following:
-<table>
+<div style="margin: 0px auto;">
+<table style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
 		<td align="center">Android</td>
@@ -196,6 +201,7 @@ The above code results in the following:
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview3.jpg" /></td>
 	</tr>
 </table>
+</div>
 
 1. First I get the full path to my image file
 2. I call to platform code via my DependencyService (notice the returned Tuple<int, int> is our image on disk's width and height)
