@@ -26,10 +26,12 @@ The above code results in the following:
 <table style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
+		<td style="width:100px">&nbsp;</td>
 		<td align="center">Android</td>
 	</tr>
 	<tr>
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview.jpg" /></td>
+		<td style="width:100px">&nbsp;</td>
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview.jpg" /></td>
 	</tr>
 </table>
@@ -81,10 +83,12 @@ The above code results in the following:
 <table style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
+		<td style="width:100px">&nbsp;</td>
 		<td align="center">Android</td>
 	</tr>
 	<tr>
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview2.jpg" /></td>
+		<td style="width:100px">&nbsp;</td>
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview2.jpg" /></td>
 	</tr>
 </table>
@@ -194,10 +198,12 @@ The above code results in the following:
 <table style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
+		<td style="width:100px">&nbsp;</td>
 		<td align="center">Android</td>
 	</tr>
 	<tr>
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview3.jpg" /></td>
+		<td style="width:100px">&nbsp;</td>
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview3.jpg" /></td>
 	</tr>
 </table>
