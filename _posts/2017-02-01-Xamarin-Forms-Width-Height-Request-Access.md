@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Easy Access to Image and Object Width & Heights in Xamarin.Forms
 date: 2017-02-01 12:23
@@ -23,7 +23,7 @@ absoluteLayout.Children.Add ( _boxView );
 
 The above code results in the following:
 <div style="margin: 0px auto;">
-<table cellpadding="20" style="margin: 0px auto;">
+<table style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
 		<td align="center">Android</td>
@@ -78,7 +78,7 @@ private void HandleBoxViewSizeChanged( object sender, EventArgs e ) {
 
 The above code results in the following:
 <div style="margin: 0px auto;">
-<table cellpadding="20" style="margin: 0px auto;">
+<table style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
 		<td align="center">Android</td>
@@ -191,7 +191,7 @@ private void AddImage() {
 
 The above code results in the following:
 <div style="margin: 0px auto;">
-<table cellpadding="20" style="margin: 0px auto;">
+<table style="margin: 0px auto;">
 	<tr>
 		<td align="center">iOS</td>
 		<td align="center">Android</td>
