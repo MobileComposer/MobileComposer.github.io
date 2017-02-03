@@ -28,8 +28,8 @@ The above code results in the following:
 		<td align="center">Android</trd>
 	</tr>
 	<tr>
-		<td>![Simple iOS BoxView](../images/2017-02-01/iOS-boxview.jpg "Simple iOS BoxView")</td>
-		<td>![Simple Android BoxView](../images/2017-02-01/droid-boxview.jpg "Simple Android BoxView")</td>
+		<td><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview.jpg" /></td>
+		<td><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview.jpg" /></td></td>
 	</tr>
 </table>
 
