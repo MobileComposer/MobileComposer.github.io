@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Easy Access to Image and Object Width & Heights in Xamarin.Forms
 date: 2017-02-01 12:23
@@ -25,41 +25,34 @@ The above code results in the following:
 <table>
 	<tr>
 		<td align="center">iOS</td>
-		<td align="center">Android</trd>
+		<td align="center">Android</td>
 	</tr>
 	<tr>
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview.jpg" /></td>
-		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview.jpg" /></td></td>
+		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/droid-boxview.jpg" /></td>
 	</tr>
 </table>
 
 But why isn't the red box centered!?  This may make sense to someone more experienced using AbsoluteLayout in Xamarin.Forms, but to someone starting out there is no point in using HorizontalOptions or VerticalOptions on an object whose parent is an AbsoluteLayout.  All child objects of AbsoluteLayout must be explicitly assigned their positioning on screen.  You would also find out that if you were to try and Debug.WriteLine the _boxView Width and or Height it is indeed -1.    So how do we get the size of the _boxView object, we wait!
 
 ##### Setup a SizeChanged Listener
-
 ```csharp
-
 _boxView.SizeChanged += HandleBoxViewSizeChanged;
-
 ```
 #### Implement the Listener
-
 ```csharp
-
 private void HandleBoxViewSizeChanged( object sender, EventArgs e ) {
 
 	_boxView.SizeChanged -= HandleBoxViewSizeChanged;
 
 	//DO THINGS HERE with _boxView
 }
-
 ```
 Now after the "//DO THINGS HERE.." you have access to the _boxView object's Width and Height (turns our the default BoxView Width/Height is 40)!  Simple right?
 
 Let's go one step further and finish center aligning the BoxView within the AbsoluteLayout as we had hoped the HorizontalOptions and VerticalOptions would have.  I'm also going to give the BoxView a larger size to start, 300x300.
 
 ```csharp
-
 private void AddBoxView() {
 
 	_boxView = new BoxView {
@@ -79,15 +72,13 @@ private void HandleBoxViewSizeChanged( object sender, EventArgs e ) {
 	_boxView.TranslationX = ( absoluteLayout.X + absoluteLayout.Width ) / 2 - ( _boxView.Width / 2 );
 	_boxView.TranslationY = ( absoluteLayout.Y + absoluteLayout.Height ) / 2 - ( _boxView.Height / 2 );
 }
-
 ```
 
 The above code results in the following:
-
 <table>
 	<tr>
 		<td align="center">iOS</td>
-		<td align="center">Android</trd>
+		<td align="center">Android</td>
 	</tr>
 	<tr>
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview2.jpg" /></td>
@@ -102,18 +93,15 @@ Another common need is to have access to the width and height of a Xamarin.Forms
 
 #### The Interface
 ```csharp
-
 public interface IImageInfo {
 
 	Tuple<int, int> GetFileWidthAndHeight ( string file );
 }
-
 ```
 
 We will call this method from our shared Xamarin.Forms code and pass in the path to the image on disk and it will return a Tuple<int,int> which is our image's width and height.
 
 #### The iOS Implementation
-
 ```csharp
 using System;
 using WidthHeightExamples.iOS;
@@ -142,13 +130,10 @@ namespace WidthHeightExamples.iOS {
 		}
 	}
 }
-
 ```
 
 #### The Android Implementation
-
 ```csharp
-
 using System;
 using WidthHeightExamples.Droid;
 using Android.Graphics;
@@ -172,15 +157,12 @@ namespace WidthHeightExamples.Droid {
 		}
 	}
 }
-
 ```
 
 In my case I have an PNG image I pulled down from the web and stored in my application's document directory.  This does need to be an image you can get the full path to.  This means that on Android you **cannot** test this with an image you store in your drawable folders as you cannot get the full path to a resource in your drawable directory.
 
 Here is the code:
-
 ```csharp
-
 private void AddImage() {
 	string filePath = App.AppInfo.DocumentPath + "/mc.png";
 
@@ -201,14 +183,13 @@ private void AddImage() {
 
 	absoluteLayout.Children.Add ( _image );
 }
-
 ```
 
 The above code results in the following:
 <table>
 	<tr>
 		<td align="center">iOS</td>
-		<td align="center">Android</trd>
+		<td align="center">Android</td>
 	</tr>
 	<tr>
 		<td align="center"><img src="{{site.baseurl}}/images/2017-02-01/iOS-boxview3.jpg" /></td>
