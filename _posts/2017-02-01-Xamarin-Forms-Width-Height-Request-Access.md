@@ -39,7 +39,7 @@ The above code results in the following:
 
 But why isn't the red box centered!?  This may make sense to someone more experienced using AbsoluteLayout in Xamarin.Forms, but to someone starting out there is no point in using HorizontalOptions or VerticalOptions on an object whose parent is an AbsoluteLayout.  All child objects of AbsoluteLayout must be explicitly assigned their positioning on screen.  You would also find out that if you were to try and Debug.WriteLine the _boxView Width and or Height it is indeed -1.    So how do we get the size of the _boxView object, we wait!
 
-#### Setup a SizeChanged Listener
+#### Setup a SizeChanged Listener  
 ```csharp
 _boxView.SizeChanged += HandleBoxViewSizeChanged;
 ```
