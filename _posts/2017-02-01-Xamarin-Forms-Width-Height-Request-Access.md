@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Easy Access to Image and Object Width & Heights in Xamarin.Forms
 date: 2017-02-01 12:23
