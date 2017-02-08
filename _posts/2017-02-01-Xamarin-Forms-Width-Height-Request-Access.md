@@ -94,7 +94,7 @@ The above code results in the following:
 </table>
 </div>
 
-Wiring up the SizeChanged event handler allowed us capture the moment the size of the BoxView is updated, and from there we are able to reposition the BoxView to the center doing some basic math.
+Wiring up the SizeChanged event handler allowed us to capture the moment the size of the BoxView is updated, and from there we are able to reposition the BoxView to the center doing some basic math.
 
 ### Get iOS & Android Image Width & Height Without Loading the Image
 Another common need is to have access to the width and height of a Xamarin.Forms Image control prior to loading the image and displaying it on screen.  This needs to be handled in the platform specific code on iOS and Android.  First we'll need an Interface that we can call into via the DependencyService.
