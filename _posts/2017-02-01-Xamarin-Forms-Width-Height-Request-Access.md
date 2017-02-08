@@ -43,9 +43,9 @@ But why isn't the red box centered!?  This may make sense to someone more experi
 ```csharp
 _boxView.SizeChanged += HandleBoxViewSizeChanged;
 ```
+
 #### Implement the Listener  
 ```csharp
-
 private void HandleBoxViewSizeChanged( object sender, EventArgs e ) {
 
 	_boxView.SizeChanged -= HandleBoxViewSizeChanged;
