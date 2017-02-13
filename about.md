@@ -8,7 +8,7 @@ This blog is a collection of thoughts from the software developers who design, d
 
 <img src="{{site.baseurl}}/images/MC Developers - Xmas 2016.jpg" width="600" /> 
 
-Join us!
+Love code? Technology? C#? Xamarin? Angular? [Join us!](https://www.mcomposer.com/contact/careers/)
 
 
 <!--### More Information-->
