@@ -170,7 +170,7 @@ namespace WidthHeightExamples.Droid {
 
 In my case I have an PNG image I pulled down from the web and stored in my application's document directory.  This does need to be an image you can get the full path to.  This means that on Android you **cannot** test this with an image you store in your drawable folders as you cannot get the full path to a resource in your drawable directory.
 
-Here is the code:
+Here is the code:  
 ```csharp
 private void AddImage() {
 	string filePath = App.AppInfo.DocumentPath + "/mc.png";
