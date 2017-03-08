@@ -5,11 +5,8 @@ date: 2017-1-31 16:01
 author: carlos
 comments: true
 published: true
-tags: [JavaScript, Angular JS, Web Development, Mobile Composer, MCTC, ITEC, Entry level developer, Jr. Developer, Junior developer ]
+tags: [JavaScript, Angular JS, Web Development, Mobile Composer, MCTC, ITEC, Entry level developer, Jr. Developer, Junior developer]
 ---
-  
-
-
 One could say that I was thrust into the role of web development.  Coming from a background of carpentry and wood-working, I had no prior experience in the IT field, and no notion of what to expect.  My exposure to web-development came as an intern at Mobile Composer through the software development program at MCTC (Minneapolis Community & Technical College).  Through my experiences with Mobile Composer, working on new code every day, watching tutorials on Pluralsight, and sifting through the forums on stackoverflow I quickly discovered that the field of web-development is constantly evolving.  Because technology is ever-changing and improving, web-development requires a continual learning process.
 
 At first, I found the demands of the work overwhelming.  I worried that I didn’t have enough of a foundation, or a strong enough knowledge base to be able to get the job done.  Now that I’ve had some experience in the field, enough to be considered a junior developer, my focus is on creating a training and certification plan that will help me better respond to the needs of my company, and find the right path of professional development.
