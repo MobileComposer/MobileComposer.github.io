@@ -15,7 +15,7 @@ This tutorial primarily focuses on the use of Visual Studio Code, thus navigate 
 
 I am approaching this tutorial with the given file structure as an example.  First, navigate to the example directory and then open Visual Studio code from the command prompt to easily switch between all the files in each chapter or module. For example, it would look something like this:
 
-<img src="/images/2017-3-10/tutorialPic1.png"/>
+<img src="{{ site.baseurl }}/images/2017-3-10/tutorialPic1.png"/>
 
 
 We will be fine tuning some windows configurations related to the file explorer quick access toolbar, which will make navigating to the desired directory easier.
@@ -29,21 +29,21 @@ You can close Visual Studio Code after your first startup. If you leave it open,
 Configuring the Quick Access Toolbar on the File Explorer
 Locate the Quick Access Toolbar, which should look something like this
 
-<img src="/images/2017-3-10/quickAccesstoolbarhighlight.png"/>
+<img src="{{ site.baseurl }}/images/2017-3-10/quickAccesstoolbarhighlight.png"/>
 
 For those that are unfamiliar with this Quick Access Toolbar, these are simple events that are mapped to a single click, which are shortcuts to perform specific actions. Hovering over these icons will display a Tooltip that also gives information as to what each button click event does. 
 
 Next, click the File button, which should display a dropdown seen below.
 
-<img src="/images/2017-3-10/commandhighlightFile.png"/>
+<img src="{{ site.baseurl }}/images/2017-3-10/commandhighlightFile.png"/>
 
 Right click on the Open command prompt and select Add to Quick Access Toolbar. You should see the Command prompt added to the quick access toolbar. Next, navigate to the directory where your project is located or select the practice project.
 
-<img src="/images/2017-3-10/addQAT.png"/>
+<img src="{{ site.baseurl }}/images/2017-3-10/addQAT.png"/>
 
 Once you are in the project directory, click on the newly added Command Line Icon in the Quick Access Toolbar. This should open a command prompt at the given location. The next step is the simplest of them all, type in the command: “code .”
 
-<img src="/images/2017-3-10/commandlinesample.png"/>
+<img src="{{ site.baseurl }}/images/2017-3-10/commandlinesample.png"/>
 
 Use the word “code” as a command followed by a space then a period as the arguments. This should open the location of the file/folder you are wanting to view/edit. Voila!  Now you have an easy way to navigate to a lesson, or sample project you may be viewing, editing, reviewing, or learning from. When editing a web page, you can quickly edit via Visual Studio Code, save changes, and test in the web browser of your choice.
 
@@ -53,4 +53,4 @@ Thanks for reading.
 
 Also, if you would like to get more familiar with command line skills, below is a table to reference. It’s great for those that want to go the extra mile, and learn a little more or just useful as a simple refresher.
 
-<img src="/images/2017-3-10/commandTable.png"/>
+<img src="{{ site.baseurl }}/images/2017-3-10/commandTable.png"/>
