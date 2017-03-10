@@ -11,12 +11,11 @@ Tutorial on Command Line skills and utilizing the Quick Access Tool bar in Windo
 
 I created this how-to guide to help developers currently learning or working on an existing project with Windows 10. My hope is that by the end of this tutorial, you will benefit from these configurations that help expedite the learning and developmental process.
 
-This tutorial primarily focuses on the use of Visual Studio Code, thus navigate to visual studio code website and download the text editor. If you don’t already have Visual Studio Code installed, you can find it  <a href=https://code.visualstudio.com/> here </a>. 
+This tutorial primarily focuses on the use of Visual Studio Code, thus navigate to visual studio code website and download the text editor. If you don’t already have Visual Studio Code installed, you can find it [here](https://code.visualstudio.com/) 
 
 I am approaching this tutorial with the given file structure as an example.  First, navigate to the example directory and then open Visual Studio code from the command prompt to easily switch between all the files in each chapter or module. For example, it would look something like this:
 
 <img src="{{ site.baseurl }}/images/2017-3-10/tutorialPic1.png"/>
-
 
 We will be fine tuning some windows configurations related to the file explorer quick access toolbar, which will make navigating to the desired directory easier.
 After downloading and installing Visual Studio Code, go ahead and open Visual Studio Code by locating it via the Windows Start menu. On the initial load, you can optionally add extensions that suit your development style.
@@ -24,7 +23,6 @@ After downloading and installing Visual Studio Code, go ahead and open Visual St
 You can close Visual Studio Code after your first startup. If you leave it open, the command line will open another instance.
 
 *Note* The required step to open Visual Studio code was to ensure the install process was successful.
-
 
 Configuring the Quick Access Toolbar on the File Explorer
 Locate the Quick Access Toolbar, which should look something like this
