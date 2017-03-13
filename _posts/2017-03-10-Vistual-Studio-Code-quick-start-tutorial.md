@@ -15,7 +15,8 @@ This tutorial primarily focuses on the use of Visual Studio Code, thus navigate 
 
 I am approaching this tutorial with the given file structure as an example.  First, navigate to the example directory and then open Visual Studio code from the command prompt to easily switch between all the files in each chapter or module. For example, it would look something like this:
 
-![overview](/MobileComposer.github.io/images/VSCtoot/tutorialPic1.png)
+![overview](/MobileComposer.github.io/images/tutorialPic1.png)
+<img src="{{site.baseurl}}/images/tutorialPic1.png" style="display:block; margin:0;">
 ![overview](\MobileComposer.github.io\images\VCStoot\tutorialPic1.png)
 We will be fine tuning some windows configurations related to the file explorer quick access toolbar, which will make navigating to the desired directory easier.
 After downloading and installing Visual Studio Code, go ahead and open Visual Studio Code by locating it via the Windows Start menu. On the initial load, you can optionally add extensions that suit your development style.
@@ -27,8 +28,8 @@ You can close Visual Studio Code after your first startup. If you leave it open,
 Configuring the Quick Access Toolbar on the File Explorer
 Locate the Quick Access Toolbar, which should look something like this
 ![firstpostTest](first-post.png)
-![quickaccessToolbar](MobileComposer.github.io/images/VCStoot/quickAccesstoolbarhighlight.png)
-
+![quickaccessToolbar](/images/quickAccesstoolbarhighlight.png)
+<img src="{{site.baseurl}}\images\quickAccessToolbarhighlight.png">
 For those that are unfamiliar with this Quick Access Toolbar, these are simple events that are mapped to a single click, which are shortcuts to perform specific actions. Hovering over these icons will display a Tooltip that also gives information as to what each button click event does.
 
 Next, click the File button, which should display a dropdown seen below.
@@ -38,6 +39,7 @@ Next, click the File button, which should display a dropdown seen below.
 Right click on the Open command prompt and select Add to Quick Access Toolbar. You should see the Command prompt added to the quick access toolbar. Next, navigate to the directory where your project is located or select the practice project.
 
 ![add quick accesstoolbar]({{ site.url }}/images/VSCtoot/addQAT.png)
+<img src="{{ site.url }}/images/VSCtoot/addQAT.png)">
 
 Once you are in the project directory, click on the newly added Command Line Icon in the Quick Access Toolbar. This should open a command prompt at the given location. The next step is the simplest of them all, type in the command: “code .”
 
