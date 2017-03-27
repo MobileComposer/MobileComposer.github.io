@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  Command line skills with Visual Studio Code
+title:  Tutorial on Command Line skills with Visual Studio Code and utilizing the Quick Access Tool bar in Windows 10
 date: 2017-3-10 16:01
 author: carlos
 comments: true
 published: true
 tags: [Visual Studio Code, command line , command line tips , command line Visual Studio Code, Getting started with visual studio code ]
 ---
-# Tutorial on Command Line skills and utilizing the Quick Access Tool bar in Windows 10
-
 I created this how-to guide to help developers currently learning or working on an existing project with Windows 10. My hope is that by the end of this tutorial, you will benefit from these configurations that help expedite the learning and developmental process.
 
 This tutorial primarily focuses on the use of Visual Studio Code, thus navigate to visual studio code website and download the text editor. If you don’t already have Visual Studio Code installed, you can find it [here](https://code.visualstudio.com/)
